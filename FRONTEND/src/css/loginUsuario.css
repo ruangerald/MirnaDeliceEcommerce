@@ -1,0 +1,172 @@
+/* =========================================
+   ARQUIVO UNIFICADO PARA LOGIN / CADASTRO / USUARIO
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:wght@400;700&display=swap');
+
+:root {
+    --cor-titulo: #8A3A2A;       /* Marrom Quente */
+    --cor-laranja: #E57A2C;      /* Laranja Queimado */
+    --cor-amarelo: #F4C045;      /* Amarelo Forte */
+    --cor-botao: #C44433;        /* Framboesa */
+    --cor-botao-hover: #D0542F;  /* Flor */
+    --cor-borda: #8A8A3A;        /* Oliva */
+    --cor-texto: #5C2A1E;        /* Marrom Profundo */
+    --cor-fundo: #F2E9D8;        /* Off-white */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; }
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- HEADER --- */
+.header {
+    background-color: rgba(255,255,255,0.5);
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px dashed var(--cor-laranja); /* Borda tracejada rústica */
+}
+
+.header img:hover { transform: scale(1.1); transition: 0.3s; }
+
+/* --- MAIN & CARD --- */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.card {
+    background-color: #fff;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid var(--cor-borda);
+    box-shadow: 10px 10px 0px var(--cor-texto); /* Sombra Rústica */
+    text-align: center;
+}
+
+.card h1 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--cor-titulo);
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--cor-amarelo);
+    padding-bottom: 10px;
+}
+
+/* --- INPUTS E LABELS --- */
+form { text-align: left; }
+
+label {
+    font-weight: bold;
+    color: var(--cor-texto);
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    background-color: #FFFCF5; /* Creme bem claro */
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--cor-laranja);
+    box-shadow: 0 0 5px rgba(229, 122, 44, 0.4);
+}
+
+/* --- BOTÕES --- */
+.btn-card {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--cor-botao);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-card:hover { background-color: var(--cor-botao-hover); }
+
+/* --- LINKS E EXTRAS --- */
+p a {
+    color: var(--cor-laranja);
+    font-weight: bold;
+}
+p a:hover { color: var(--cor-titulo); text-decoration: underline; }
+
+#res { margin-top: 15px; font-weight: bold; color: var(--cor-titulo); }
+
+/* --- PERFIL (USUARIO.HTML) --- */
+.perfil-container p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-align: left;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+    padding: 40px 10% 20px;
+    border-top: 4px solid var(--cor-amarelo);
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: var(--cor-amarelo);
+}
+.footer-logo span { color: var(--cor-laranja); }
+
+.social-icons { display: flex; gap: 15px; }
+.social-icons img { filter: invert(1); transition: 0.3s; }
+.social-icons img:hover { transform: scale(1.2); }
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+    .card { box-shadow: 5px 5px 0px var(--cor-texto); }
+    .footer-container { flex-direction: column; text-align: center; }
+}
