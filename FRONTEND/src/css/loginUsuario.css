@@ -25,16 +25,33 @@ body {
     min-height: 100vh;
 }
 
-/* --- HEADER --- */
-.header {
-    background-color: rgba(255,255,255,0.5);
-    padding: 15px 10%;
+/* =========================================
+   HEADER
+   ========================================= */
+   .header {
+    background-color: rgba(242, 233, 216, 0.95); /* Bege com transparência */
+    padding: 15px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px dashed var(--cor-laranja); /* Borda tracejada rústica */
+    border-bottom: 3px solid var(--cor-laranja);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
+.menu a {
+    color: var(--cor-titulo);
+    font-size: 1.2rem;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: 'Dancing Script', cursive; /* Toque artesanal no menu */
+}
+
+.menu a:hover {
+    color: var(--cor-botao);
+}
 .header img:hover { transform: scale(1.1); transition: 0.3s; }
 
 /* --- MAIN & CARD --- */
