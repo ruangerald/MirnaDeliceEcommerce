@@ -18,14 +18,16 @@
 
         <nav class="menu">
             <a href="#">Home</a>
-            <a href="#">Produtos</a>
             <a href="./html/sobre.html">Sobre</a>
         </nav>
 
 
         <div class="conta">
+            <button id="carrinhoCompra">
+                <img src="../public/cart.png" width="40" alt="Carrinho de Compras">
+            </button>
             <button id="loginUsuario">
-                <img src="../public/user.png" width="40">
+                <img src="../public/user.png" width="40" alt="Login de Usuário">
             </button>
         </div>
     </header>
@@ -35,7 +37,7 @@
         <div class="hero-text">
             <h1>O artesanal que conquista.</h1>
             <p>Basta experimentar para se apaixonar.</p>
-            <a class="btn-hero" href="#">Ver catálogo</a>
+            <!-- <a class="btn-hero" href="#">Ver catálogo</a> -->
         </div>
     </section>
 
@@ -43,43 +45,47 @@
     <main>
         <section class="modelos">
             <h2>Produtos em Destaque</h2>
-
+    
             <div class="cards-container">
-
-                <div class="produto-card">
+    
+                <div class="produto-card" data-id="1" data-nome="Licor de morango 900ml" data-preco="35.90">
                     <img src="#" alt="">
                     <h3>Licor de morango 900ml</h3>
                     <p>Feito com morangos frescos, doce na medida e cheio de aroma. Perfeito para beber gelado.</p>
-                    <a href="#" class="btn-card">Ver mais</a>
+                    <p class="preco">R$ 35,90</p>
+                    <button onclick="addCart(this)">Adicionar no carrinho</button>
                 </div>
-
-                <div class="produto-card">
+    
+                <div class="produto-card" data-id="2" data-nome="Licor de Laranja 900ml" data-preco="35.90">
                     <img src="##" alt="">
                     <h3>Licor de Laranja 900ml</h3>
                     <p>Refrescante e levemente cítrico, com aroma intenso de laranja. Ideal puro ou em drinks.</p>
-                    <a href="#" class="btn-card">Ver mais</a>
+                    <p class="preco">R$ 35,90</p>
+                    <button onclick="addCart(this)">Adicionar no carrinho</button>
                 </div>
-
-                <div class="produto-card">
+    
+                <div class="produto-card" data-id="3" data-nome="Mousse de Banana" data-preco="14.90">
                     <img src="#" alt="">
                     <h3>Mousse de Banana</h3>
                     <p>Suave, cremoso e feito com bananas maduras. Um doce aconchegante que derrete na boca.</p>
-                    <a href="#" class="btn-card">Ver mais</a>
+                    <p class="preco">R$ 14,90</p>
+                    <button onclick="addCart(this)">Adicionar no carrinho</button>
                 </div>
-                
-                <div class="produto-card">
+    
+                <div class="produto-card" data-id="4" data-nome="Mousse de Ameixa" data-preco="14.90">
                     <img src="#" alt="">
                     <h3>Mousse de Ameixa</h3>
                     <p>Cremoso, com sabor marcante de ameixa e leve toque ácido. Doce equilibrado e sofisticado.</p>
-                    <a href="#" class="btn-card">Ver mais</a>
+                    <p class="preco">R$ 14,90</p>
+                    <button onclick="addCart(this)">Adicionar no carrinho</button>
                 </div>
-
+    
             </div>
         </section>
     </main>
 
     <!-- FOOTER -->
-   <footer>
+    <footer>
         <div class="footer-container">
 
             <div>
@@ -89,7 +95,7 @@
 
             <div class="footer-social">
                 <h4>Redes Sociais</h4><br>
-               <div class="social-icons">
+                <div class="social-icons">
                     <a href="https://www.instagram.com/ruan_gerald/">
                         <img src="../public/insta.png" width="30" alt="Instagram">
                     </a>

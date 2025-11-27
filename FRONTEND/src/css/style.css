@@ -58,6 +58,10 @@ body {
 .menu a:hover {
     color: var(--cor-botao);
 }
+.conta {
+    gap: 20px;
+    display: flex;
+}
 
 .conta button {
     background: none;
@@ -243,3 +247,88 @@ footer {
     font-size: 0.8rem;
     opacity: 0.7;
 }
+
+
+/* =========================================
+   CARDS (MODELOS/PRODUTOS) - CONTINUAÇÃO
+   ========================================= */
+
+/* Estilo para o preço dentro do card */
+.produto-card .preco {
+    font-size: 1.4rem;
+    color: var(--cor-laranja);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.produto-card button {
+    /* Estilo principal do botão "Adicionar no carrinho" */
+    background-color: var(--cor-botao);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.0rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%; /* Ocupa a largura total do card */
+    box-shadow: 2px 2px 0px var(--cor-texto);
+}
+
+.produto-card button:hover {
+    background-color: var(--cor-botao-hover);
+    transform: translateY(-2px); /* Efeito sutil de elevação */
+    box-shadow: 4px 4px 0px var(--cor-texto);
+}
+
+.produto-card button:active {
+    transform: translateY(1px); /* Efeito de clique */
+    box-shadow: 1px 1px 0px var(--cor-texto);
+}
+
+/* =========================================
+   RESET E GERAL - MODIFICAÇÃO
+   ========================================= */
+/* ... (Seu código anterior) ... */
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Lato', sans-serif;
+    
+    /* Regras do Sticky Footer: */
+    display: flex; /* Define o corpo como um container flex */
+    flex-direction: column; /* Organiza os filhos verticalmente */
+    min-height: 100vh; /* Garante que o corpo ocupe 100% da altura da tela */
+}
+
+/* ... (Seu código anterior) ... */
+
+/* =========================================
+   CARDS (MODELOS/PRODUTOS) - MODIFICAÇÃO
+   ========================================= */
+
+/* Use a tag <main> para empurrar o footer para baixo */
+main {
+    flex-grow: 1; /* Permite que o <main> ocupe todo o espaço disponível restante */
+}
+
+/* ... SEÇÃO RESET E GERAL ... */
+body {
+    /* ... (Estilos existentes) ... */
+    
+    /* ADICIONE estas 3 linhas */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* ... (Outras Seções) ... */
+
+/* ADICIONE este bloco para empurrar o footer */
+main {
+    flex-grow: 1; 
+}
+
+/* ... (Outras Seções, incluindo FOOTER) ... */
